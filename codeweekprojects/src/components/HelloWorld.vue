@@ -28,14 +28,14 @@
       </li>
     </ul>
     <h3>Essential Links</h3>
+    <h3 class="jantje"></h3>
     <ul>
       <li class="linkie">
         <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
       </li>
       <li class="linkie">
         <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
-          >Forum</a
-        >
+          >Forum</a>
       </li>
       <li class="linkie">
         <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
