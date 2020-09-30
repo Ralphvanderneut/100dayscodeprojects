@@ -1,20 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" v-show="false" />
-  <HelloWorld msg="Welcome to Your Vue.js App" v-show="false" />
-  <TeleportMe v-show="false"></TeleportMe>
-  <DeDom />
+  <AnimeSuggestion />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import TeleportMe from "./components/TeleportMe";
-import DeDom from "./components/DeDom";
+// import HelloWorld from "./components/HelloWorld.vue";
+// import TeleportMe from "./components/TeleportMe";
+// import DeDom from "./components/DeDom";
+import AnimeSuggestion from "./components/AnimeSuggestion";
+
 export default {
   name: "App",
   components: {
-    HelloWorld,
-    TeleportMe,
-    DeDom,
+    AnimeSuggestion,
   },
 };
 </script>
