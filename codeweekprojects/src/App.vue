@@ -6,7 +6,7 @@
 // import HelloWorld from "./components/HelloWorld.vue";
 // import TeleportMe from "./components/TeleportMe";
 // import DeDom from "./components/DeDom";
-import AnimeSuggestion from "./components/AnimeSuggestion";
+import AnimeSuggestion from "./components/AnimeSuggestionCompostion";
 
 export default {
   name: "App",

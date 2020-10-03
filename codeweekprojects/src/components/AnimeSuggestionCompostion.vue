@@ -13,7 +13,7 @@
         Suggest
       </button>
     </div>
-    <div v-if="suggestion.other">
+    <div v-if="suggestion">
       <div class="flex flex-col bg-gray-200  rounded-md m-10 p-5 w-1/2 mx-auto">
         <h2 class="w-auto h-auto border-b font-mono font-bold text-xl mb-4 ">
           {{ suggestion.title ?? suggestion.titleJap }}
@@ -35,28 +35,15 @@
 </template>
 
 <script>
-import { getAnimeSuggestion } from "../helpers/randomNumber";
+import { AnimeComposable } from "../composables/SuggestAnime";
+
 export default {
-  data() {
-    return {
-      suggestion: {
-          title: null,
-          titleJap: null,
-          imgurl: null,
-          synopsis: null,
-          other: null,
-      },
-      threshold: 2000,
-    };
-  },
-  methods: {
-    suggestAnime() {
-      getAnimeSuggestion(this.threshold).then((res) => {
-        this.suggestion = res;
-      });
-    },
+  setup() {
+    const { suggestion, suggestAnime } = AnimeComposable();
+
+    return { suggestion, suggestAnime };
   },
 };
 </script>
 
-<style lang="css" scoped></style>
+<style lang="scss" scoped></style>

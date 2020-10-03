@@ -14,15 +14,16 @@ const getAnimeSuggestion = async (multiplier) => {
     `https://kitsu.io/api/edge/anime/${GetRandom(multiplier)}`
   );
   const res = await resp.json();
+  console.log(res);
   const {
     attributes: {
       synopsis,
-      titles: { en: title },
+      titles: { en: title, en_jp: titleJap },
       posterImage: { tiny: imgUrl },
       ...other
     },
   } = res.data;
-  return { synopsis, title, imgUrl, other };
+  return { synopsis, title, titleJap, imgUrl, other };
 };
 
 export { getAnimeSuggestion };
