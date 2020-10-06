@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-blue-800 text-left h-auto">
-        <span class=" text-2xl text-white align-middle ml-2">Ralph's portfolio</span>
+    <div class="bg-blue-800 flex flex-row justify-between text-left pl-2 pr-2">
+        <span class=" text-2xl text-white">Ralph's portfolio</span>
         <CloseButton></CloseButton>
     </div>
 </template>
