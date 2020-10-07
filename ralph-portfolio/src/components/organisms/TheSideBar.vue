@@ -1,24 +1,26 @@
 <template>
     <div class="border-r border-blue-400 border-opacity-50 p-8 mt-1 mb-1 text-left">
-        <ul>
-            <SideBarMenuItem text="Over mij"></SideBarMenuItem>
-            <li class="flex flex-row  items-center"><img src="@/assets/icons/folder.svg" class="h-4 mr-1">Projecten</li>
-            <li class="flex flex-row items-center"><img src="@/assets/icons/folder.svg" class="h-4 mr-1">blogs</li>
-            <li class="flex flex-row  items-center"><img src="@/assets/icons/folder.svg" class="h-4 mr-1">Tekeningen</li>
-        </ul>
+       <SideBarMenu :items="menuItems" @selected="OnMenuItemSelected"></SideBarMenu>
     </div>
 </template>
 
 <script lang="ts">
-import SideBarMenuItem from "@/components/atoms/SideBarMenuItem.vue";
-import { defineComponent } from 'vue'
+import SideBarMenu from "@/components/molecules/SideBarMenu.vue";
+import { defineComponent, ref } from 'vue'
+import {ItemSelected} from "../../composables/ItemSelected";
 
 export default defineComponent({
-    components: {
-        SideBarMenuItem,
+    props: {
+        menuItems: Array
     },
-    setup () {
-        return {}
+    components: {
+        SideBarMenu,
+    },
+    setup (props, {emit}) {
+
+        const {OnItemSelected} = ItemSelected(emit);
+
+        return {OnItemSelected}
     }
 })
 </script>

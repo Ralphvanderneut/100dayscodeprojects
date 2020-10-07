@@ -1,12 +1,12 @@
 <template>
 <consoleWindow>
 <TheHeader></TheHeader>
-<TheBody></TheBody>
+<TheBody ></TheBody>
 </consoleWindow>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent} from 'vue';
 import consoleWindow from "@/templates/consoleWindow.vue";
 import TheHeader from "@/components/organisms/TheHeader.vue";
 import TheBody from "@/components/organisms/TheBody.vue";
@@ -17,6 +17,9 @@ export default defineComponent({
     consoleWindow,
     TheHeader,
     TheBody
+  },
+  setup(){
+      return {};
   }
 });
 </script>
