@@ -1,26 +1,38 @@
 <template>
-<consoleWindow>
-<TheHeader></TheHeader>
-<TheBody ></TheBody>
-</consoleWindow>
+  <consoleWindow>
+    <Transition>
+      <Modal v-if="isOpen" class=""></Modal>
+    </Transition>
+    <TheHeader @click="OnCLick"></TheHeader>
+    <TheBody></TheBody>
+  </consoleWindow>
 </template>
 
 <script lang="ts">
-import { defineComponent} from 'vue';
+import { defineComponent, ref } from "vue";
 import consoleWindow from "@/templates/consoleWindow.vue";
 import TheHeader from "@/components/organisms/TheHeader.vue";
 import TheBody from "@/components/organisms/TheBody.vue";
+import Modal from "@/components/molecules/Modal.vue";
+import Transition from "@/components/atoms/Transition.vue";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: {
     consoleWindow,
     TheHeader,
-    TheBody
+    TheBody,
+    Modal,
+    Transition,
   },
-  setup(){
-      return {};
-  }
+  setup() {
+    const isOpen = ref(false);
+
+    const OnCLick = (): void => {
+      isOpen.value = !isOpen.value;
+    };
+    return { isOpen, OnCLick };
+  },
 });
 </script>
 
