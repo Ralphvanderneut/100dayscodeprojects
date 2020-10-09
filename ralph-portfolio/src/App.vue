@@ -1,29 +1,36 @@
 <template>
-  <consoleWindow>
-    <Transition>
+  <div>
+    <button @click="OnCLick">hoi</button>
+    <PopUpTransition v-if="isOpen">
+      <div class="bg-red-700 ml-auto mr-auto h-40 w-40"></div>
+    </PopUpTransition>
+  </div>
+  <!-- <consoleWindow> -->
+  <!--
+     
       <Modal v-if="isOpen" class=""></Modal>
-    </Transition>
+    </PopUpTransition>
     <TheHeader @click="OnCLick"></TheHeader>
     <TheBody></TheBody>
-  </consoleWindow>
+  </consoleWindow> -->
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
-import consoleWindow from "@/templates/consoleWindow.vue";
-import TheHeader from "@/components/organisms/TheHeader.vue";
-import TheBody from "@/components/organisms/TheBody.vue";
-import Modal from "@/components/molecules/Modal.vue";
-import Transition from "@/components/atoms/Transition.vue";
+import { defineComponent, ref, computed } from "vue";
+// import consoleWindow from "@/templates/consoleWindow.vue";
+// import TheHeader from "@/components/organisms/TheHeader.vue";
+// import TheBody from "@/components/organisms/TheBody.vue";
+//import Modal from "@/components/molecules/Modal.vue";
+import PopUpTransition from "@/components/atoms/PopUpTransition.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    consoleWindow,
-    TheHeader,
-    TheBody,
-    Modal,
-    Transition,
+    // consoleWindow,
+    // TheHeader,
+    // TheBody,
+    //Modal,
+    PopUpTransition,
   },
   setup() {
     const isOpen = ref(false);
@@ -31,7 +38,12 @@ export default defineComponent({
     const OnCLick = (): void => {
       isOpen.value = !isOpen.value;
     };
-    return { isOpen, OnCLick };
+
+    const Move = computed((): boolean => {
+      return isOpen.value;
+    });
+
+    return { isOpen, OnCLick, Move };
   },
 });
 </script>
@@ -44,5 +56,10 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.move {
+  background-color: aliceblue;
+  transform: translate(25%, 25%);
 }
 </style>
