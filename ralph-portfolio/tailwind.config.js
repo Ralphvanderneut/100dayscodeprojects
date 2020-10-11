@@ -5,6 +5,11 @@ module.exports = {
   },
   purge: [],
   theme: {
+    listStyleType: {
+      none: 'none',
+       disc: 'disc',
+       japan: 'katakana',
+    },
     extend: {},
   },
   variants: {},

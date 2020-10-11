@@ -1,5 +1,5 @@
 <template>
-  <div class="h-auto bg-red-800 absolute w-auto trans">
+  <div class="h-auto bg-red-800 absolute w-auto trans ">
     <span>hallo ik ben een modal</span>
   </div>
 </template>
