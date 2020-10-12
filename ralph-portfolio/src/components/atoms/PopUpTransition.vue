@@ -23,6 +23,6 @@ export default defineComponent({
 }
 .folder-popup-enter-from, .folder-popup-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translate(-75%, 75%) scaleY(0.5);
+  transform: translate(-25%, 5%) scaleY(0.5);
 }
 </style>
