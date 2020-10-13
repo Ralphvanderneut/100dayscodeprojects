@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 60" x="0px" y="0px">
+  <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" viewBox="0 0 48 60" >
     <title>ui vol.1</title>
     <g data-name="Layer 15">
       <path
@@ -9,26 +9,6 @@
         d="M12.541,17.20313a4.69629,4.69629,0,1,0-4.69629-4.69629A4.70153,4.70153,0,0,0,12.541,17.20313Zm0-7.39258a2.69629,2.69629,0,1,1-2.69629,2.69629A2.69955,2.69955,0,0,1,12.541,9.81055Z"
       />
     </g>
-    <text
-      x="0"
-      y="63"
-      fill="#000000"
-      font-size="5px"
-      font-weight="bold"
-      font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"
-    >
-      Created by Fahmi Ramdani
-    </text>
-    <text
-      x="0"
-      y="68"
-      fill="#000000"
-      font-size="5px"
-      font-weight="bold"
-      font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"
-    >
-      from the Noun Project
-    </text>
   </svg>
 </template>
 

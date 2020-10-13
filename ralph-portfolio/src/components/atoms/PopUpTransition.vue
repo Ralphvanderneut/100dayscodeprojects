@@ -1,5 +1,5 @@
 <template>
-  <transition name="folder-popup" appear>
+  <transition name="folder" appear >
     <slot></slot>
   </transition>
 </template>
@@ -15,14 +15,10 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.folder-popup-enter-active {
+.folder-enter-active, .folder-leave-active {
   transition: all 0.3s ease;
 }
-.folder-popup-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.folder-popup-enter-from, .folder-popup-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translate(-25%, 5%) scaleY(0.5);
+.folder-enter-from, .folder-leave-to {
+  transform: translate(-25%, 0%)  scaleX(0.5);
 }
 </style>
