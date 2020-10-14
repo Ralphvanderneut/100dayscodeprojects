@@ -10,6 +10,11 @@ module.exports = {
        disc: 'disc',
        japan: 'katakana',
     },
+    inset: {
+      '0': 0,
+       auto: 'auto',
+      '1/5': '20%',
+    },
     extend: {},
   },
   variants: {},

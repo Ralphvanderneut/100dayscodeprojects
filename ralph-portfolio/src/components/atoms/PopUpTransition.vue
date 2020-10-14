@@ -16,9 +16,9 @@ export default defineComponent({
 
 <style scoped>
 .folder-enter-active, .folder-leave-active {
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .folder-enter-from, .folder-leave-to {
-  transform: translate(-25%, 0%)  scaleX(0.5);
+  opacity:0;
 }
 </style>
