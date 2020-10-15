@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-row">
         <div class=" ml-4">
-
+            <slot></slot>
         </div>
     </div>
 </template>

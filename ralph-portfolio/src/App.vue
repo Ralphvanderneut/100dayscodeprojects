@@ -3,7 +3,9 @@
    <PopUpTransition v-if="isOpen" >
         <consoleWindow > 
           <TheHeader @click="OnCLick"></TheHeader>
-           <TheBody></TheBody>
+           <TheBody>
+             <ImageGallery />
+           </TheBody>
         </consoleWindow>
     </PopUpTransition>
     </div>
@@ -25,14 +27,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed } from "vue";
+import { defineComponent, ref } from "vue";
 import consoleWindow from "@/templates/consoleWindow.vue";
 import TheHeader from "@/components/organisms/TheHeader.vue";
 import TheBody from "@/components/organisms/TheBody.vue";
 import PopUpTransition from "@/components/atoms/PopUpTransition.vue";
 import SlideInTransition from "@/components/atoms/SlideInTransition.vue";
 import DesktopItem from "@/components/atoms/DesktopItem.vue";
-
+import ImageGallery from "@/components/organisms/ImageGallery.vue";
 
 import AboutMe from "@/components/organisms/AboutMe.vue";
 
@@ -45,7 +47,8 @@ export default defineComponent({
     PopUpTransition,
     SlideInTransition,
     AboutMe,
-    DesktopItem
+    DesktopItem,
+    ImageGallery
   },
   setup() {
     const isOpen = ref(false);
