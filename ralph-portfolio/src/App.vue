@@ -4,8 +4,9 @@
         <consoleWindow > 
           <TheHeader @click="OnCLick"></TheHeader>
            <TheBody>
-             <SearchAirPhoto />
+             <!-- <SearchAirPhoto /> -->
              <!-- <ImageGallery /> -->
+             <LoadingComponent />
            </TheBody>
         </consoleWindow>
     </PopUpTransition>
@@ -35,8 +36,9 @@ import TheBody from "@/components/organisms/TheBody.vue";
 import PopUpTransition from "@/components/atoms/PopUpTransition.vue";
 import SlideInTransition from "@/components/atoms/SlideInTransition.vue";
 import DesktopItem from "@/components/atoms/DesktopItem.vue";
+import LoadingComponent from "@/components/organisms/LoadingComponent.vue";
 // import ImageGallery from "@/components/organisms/ImageGallery.vue";
-import SearchAirPhoto from "@/components/organisms/SearchAirPhoto.vue";
+//import SearchAirPhoto from "@/components/organisms/SearchAirPhoto.vue";
 
 import AboutMe from "@/components/organisms/AboutMe.vue";
 
@@ -50,8 +52,9 @@ export default defineComponent({
     SlideInTransition,
     AboutMe,
     DesktopItem,
+    LoadingComponent
     // ImageGallery,
-    SearchAirPhoto
+   // SearchAirPhoto
   },
   setup() {
     const isOpen = ref(false);
