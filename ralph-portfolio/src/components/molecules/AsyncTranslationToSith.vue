@@ -1,23 +1,26 @@
 <template>
     <div>
-        hoi hoi
+        <input type="text" v-model="query" />
+        <button @click="translate">Vertaal</button>
+        <span>{{answer}}</span>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted } from 'vue'
+import {Translate} from "../../composables/Translate";
 
-async function getTranslation() {
-    return new Promise(resolve => 
-    setTimeout(resolve,1000));
-} 
 
 
 export default defineComponent({
     async setup () {
-        await getTranslation();
+        const { TranslateToSith , query, answer} = Translate();
 
-        return {}
+        const translate = (): void => {
+            TranslateToSith().then(res => console.log(res)); 
+        }
+
+        return {translate, query,answer}
     }
 })
 </script>
