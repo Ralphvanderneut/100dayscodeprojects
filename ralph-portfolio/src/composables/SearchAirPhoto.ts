@@ -6,6 +6,7 @@ export function AirPhoto() {
 
         const resp = await fetch(`${apiUrl}&limit=${limit}&q=${search}`);
         const res = await resp.json();
+         
         return res.result.records
         
     }

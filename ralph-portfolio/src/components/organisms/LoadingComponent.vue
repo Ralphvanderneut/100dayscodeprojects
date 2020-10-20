@@ -1,13 +1,14 @@
 
 <template>
-<Suspense>
+    <AsyncTranslationToSith />
+<!-- <Suspense>
     <template #default>
         <AsyncTranslationToSith />
     </template>
     <template #fallback>
         vertaling is aan het laden.
     </template>
-</Suspense>
+</Suspense> -->
 </template>
 
 <script lang="ts">
