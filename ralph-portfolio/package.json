@@ -26,5 +26,10 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "typescript": "~3.9.3"
+  },
+  "eslintConfig": {
+    "rules": {
+        "no-var": 0
+    }
   }
 }

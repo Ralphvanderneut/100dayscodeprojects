@@ -1,3 +1,5 @@
+
+
 <template>
   <div>
     <input type="text" v-model="query" />
@@ -11,29 +13,33 @@ import { defineComponent } from "vue";
 import { Translate } from "../../composables/Translate";
 
 
-
-export default defineComponent({
+ /* eslint no-var: off */
+ export default defineComponent({
   setup() {
-    const recognition = new window.webkitSpeechRecognition()
-    recognition.lang= "nl";
-    const { TranslateToSith} = Translate();
-
-    const translate = (): void => {
-        recognition.start();
-      
-    };
-
-    recognition.onresult = (event) => {
-        //console.log(event.results[0][0].transcript);
-        var transcript  = event.results[0][0].transcript;
-        TranslateToSith(transcript).then((res) => console.log(res));
+    console.log(window);
+    if("WebkitSpeechRecognition" in window){
+      var recognition = new window.WebkitSpeechRecognition();
     }
+    // 
+    
+    // recognition.lang= "nl";
+    // const { TranslateToSith, answer} = Translate();
 
-    recognition.onspeechend = () => {
-        recognition.stop();
-    }
+    // const translate = (): void => {
+    //     recognition.start();
+    // };
 
-    return { translate };
+    // recognition.onresult = (event: any) => {
+    //     TranslateToSith(event.results[0][0].transcript).then();
+    //     //  var x = new window.SpeechSynthesis();
+    //     // x.speak(new window.SpeechSynthesisUtterance("hello world")) ;
+    // }
+
+    // recognition.onspeechend = () => {
+    //     recognition.stop();
+    // }
+
+    return { };
   },
 });
 </script>

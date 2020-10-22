@@ -1,17 +1,18 @@
 <template>
-  <AnimeSuggestion />
+  <SithTranslator />
 </template>
 
 <script>
 // import HelloWorld from "./components/HelloWorld.vue";
 // import TeleportMe from "./components/TeleportMe";
 // import DeDom from "./components/DeDom";
-import AnimeSuggestion from "./components/AnimeSuggestionCompostion";
-
+//import AnimeSuggestion from "./components/AnimeSuggestionCompostion";
+import SithTranslator from "./components/SithTranslator";
 export default {
   name: "App",
   components: {
-    AnimeSuggestion,
+    //AnimeSuggestion,
+    SithTranslator
   },
 };
 </script>
