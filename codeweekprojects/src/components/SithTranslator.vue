@@ -1,36 +1,22 @@
 <template>
-    <div>
-        <input type="text" v-model="query" />
-        <button @click="Translate">Vertaal</button>
-        <span>{{ answer }}</span>
+    <div class="flex flex-col w-auto mx-auto bg-gray-400 w-2/3 p-4">
+        <h1 class="font-mono"> Sith Translator</h1>
+        <div class="mx-auto w-2/3 border-4 border-gray-700 rounded-md shadow-outline">
+            <img src="@/assets/img/sithlord.jpg" class="" />
+        </div>
+        <button @click="RecordAndSpeak">Vertaal</button>
+        <!-- <span>{{ answer }}</span> -->
     </div>
 </template>
 
 <script>
-import {ref} from "vue";
-
+// /import {ref} from "vue";
+import {TranslateToSith} from "@/composables/TranslateToSith.js";
 
 export default {
     setup () {
-        const query = ref("");
-        const answer = ref("");
-        let utterThis =  null ;
-        var recognition = new window.webkitSpeechRecognition();
-        var synth = window.speechSynthesis;
-        const Translate = () => {
-            recognition.start();
-        }
-
-        recognition.onresult = (event) =>{
-            query.value = event.results[0][0].transcript;
-            utterThis = new SpeechSynthesisUtterance(query.value); 
-            synth.speak(utterThis);
-        }
-
-        recognition.onspeechend = () =>{
-            recognition.stop();
-        }
-        return {Translate ,query, answer}
+        const {RecordAndSpeak} = TranslateToSith();  
+        return {RecordAndSpeak}
     }
 }
 </script>

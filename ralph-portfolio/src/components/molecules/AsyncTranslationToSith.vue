@@ -18,7 +18,7 @@ import { Translate } from "../../composables/Translate";
   setup() {
     console.log(window);
     if("WebkitSpeechRecognition" in window){
-      var recognition = new window.WebkitSpeechRecognition();
+      var recognition = new window.SpeechRecognition();
     }
     // 
     
